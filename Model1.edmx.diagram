@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="b1ce0165c7bb4820bf0a091ae4a24d9c" Name="Diagram1">
+        <EntityTypeShape EntityType="TatExpModel.Category" Width="1.5" PointX="5.25" PointY="10.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="TatExpModel.Category_prod" Width="1.5" PointX="7.5" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="TatExpModel.Desire" Width="1.5" PointX="5.25" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TatExpModel.Desire_prod" Width="1.5" PointX="7.5" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="TatExpModel.Employee" Width="1.5" PointX="3" PointY="13.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="TatExpModel.Order" Width="1.5" PointX="5.25" PointY="14.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="TatExpModel.Pick_point" Width="1.5" PointX="5.25" PointY="21.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="TatExpModel.PP_order" Width="1.5" PointX="7.5" PointY="15.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="TatExpModel.PP_owner" Width="1.5" PointX="3" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TatExpModel.Prod_order" Width="1.5" PointX="7.5" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TatExpModel.Product" Width="1.5" PointX="5.25" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="TatExpModel.Shop_cart_Prod" Width="1.5" PointX="10.5" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TatExpModel.Shoppping_cart" Width="1.5" PointX="8.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TatExpModel.Status" Width="1.5" PointX="3" PointY="17.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="TatExpModel.Store" Width="1.5" PointX="3" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TatExpModel.User" Width="1.5" PointX="3" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="TatExpModel.Vender" Width="1.5" PointX="0.75" PointY="5.75" IsExpanded="true" />
+        <AssociationConnector Association="TatExpModel.FK_Category_prod_Category" ManuallyRouted="false" />
+        <AssociationConnector Association="TatExpModel.FK_Category_prod_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="TatExpModel.FK_Desire_prod_Desire" ManuallyRouted="false" />
+        <AssociationConnector Association="TatExpModel.FK_Desire_User" ManuallyRouted="false" />
+        <AssociationConnector Association="TatExpModel.FK_Desire_prod_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="TatExpModel.FK_Order_Employee" ManuallyRouted="false" />
+        <AssociationConnector Association="TatExpModel.FK_Order_Status" ManuallyRouted="false" />
+        <AssociationConnector Association="TatExpModel.FK_Order_User" ManuallyRouted="false" />
+        <AssociationConnector Association="TatExpModel.FK_PP_order_Order" ManuallyRouted="false" />
+        <AssociationConnector Association="TatExpModel.FK_Prod_order_Order" ManuallyRouted="false" />
+        <AssociationConnector Association="TatExpModel.FK_Pick_point_PP_owner" ManuallyRouted="false" />
+        <AssociationConnector Association="TatExpModel.FK_PP_order_Pick_point" ManuallyRouted="false" />
+        <AssociationConnector Association="TatExpModel.FK_Prod_order_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="TatExpModel.FK_Product_Store" ManuallyRouted="false" />
+        <AssociationConnector Association="TatExpModel.FK_Shop_cart_Prod_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="TatExpModel.FK_Shop_cart_Prod_Shoppping_cart1" ManuallyRouted="false" />
+        <AssociationConnector Association="TatExpModel.FK_Shoppping_cart_User" ManuallyRouted="false" />
+        <AssociationConnector Association="TatExpModel.FK_Store_Vender" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

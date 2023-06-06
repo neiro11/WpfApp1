@@ -1,0 +1,88 @@
+﻿<UserControl x:Class="WpfApp1.UserControl1"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" d:DesignWidth="900" Height="52">
+    <Grid Background="White">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.8*"/>
+            <ColumnDefinition Width="0.5*"/>
+            <ColumnDefinition Width="1.4*"/>
+            <ColumnDefinition Width="0.5*"/>
+            <ColumnDefinition Width="0.4*"/>
+            <ColumnDefinition Width="0.32*"/>
+        </Grid.ColumnDefinitions>
+        <Button VerticalAlignment="Center" Click="Button_Click_4" >
+            <Button.Template>
+                <ControlTemplate>
+                    <TextBlock Text="TatExpress"  FontFamily="Nirmala UI" FontSize="24" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <StackPanel VerticalAlignment="Center" Grid.Column="2" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Grid>
+                <Border Background="#EFEFEF" CornerRadius="10" Margin="10" VerticalAlignment="Center">
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" >
+                        <Image Source="Resources/images/search1.png" Width="20" Margin="10 0 0 0" VerticalAlignment="Center"/>
+                        <TextBox x:Name="SearchTextBox" TextChanged="SearchTextBox_TextChanged"  Foreground="Black" Width="200" Height="30" Margin="5 0 10 0" Padding="5" Text="Поиск..." BorderThickness="0" Background="#EFEFEF" VerticalAlignment="Center">
+
+                        <TextBox.Style>
+                                <Style TargetType="TextBox">
+                                    <Setter Property="Foreground" Value="Gray"/>
+                                    <Style.Triggers>
+                                        <Trigger Property="IsKeyboardFocused" Value="True">
+                                            <Setter Property="Foreground" Value="Black"/>
+                                            <Setter Property="Text" Value=""/>
+                                        </Trigger>
+                                        <Trigger Property="Text" Value="Поиск...">
+                                            <Setter Property="Foreground" Value="LightGray"/>
+                                        </Trigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </TextBox.Style>
+                        </TextBox>
+                    </StackPanel>
+                </Border>
+            </Grid>
+
+        </StackPanel>
+        
+        <StackPanel Grid.Column="3" Orientation="Horizontal">
+            <Image Height="17"  Source="Resources\images\Heart.png" VerticalAlignment="Center"></Image>
+            <Button VerticalAlignment="Center" Click="Button_Click_1" Height="16" Width="80">
+                <Button.Template>
+                    <ControlTemplate>
+                        <TextBlock Text="Избранное"  TextAlignment="Center"></TextBlock>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+        </StackPanel>
+        <StackPanel Grid.Column="4" Orientation="Horizontal">
+            <Image Height="17"  Source="Resources\images\Buy.png" VerticalAlignment="Center"></Image>
+           
+            <Button VerticalAlignment="Center" Click="Button_Click_2" Height="16" Width="61">
+                <Button.Template>
+                    <ControlTemplate>
+                        <TextBlock Text="Корзина"  TextAlignment="Center"></TextBlock>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+        </StackPanel>
+        <StackPanel Grid.Column="5" Orientation="Horizontal">
+
+
+            <Image x:Name="img_enter" Height="17"  Source="Resources\images\Profile.png" VerticalAlignment="Center"></Image>
+            <Button x:Name="btn_enter"  VerticalAlignment="Center" Height="16" Width="46" Click="Button_Click">
+                <Button.Template>
+                    <ControlTemplate>
+                        <TextBlock Text="Войти"  TextAlignment="Center"></TextBlock>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+
+        </StackPanel>
+        <Image x:Name="img_user" Source="Resources\images\Profile.png" HorizontalAlignment="Center" VerticalAlignment="Center" Width="25" Visibility="Hidden" Grid.Column="5" MouseLeftButtonDown="img_user_MouseLeftButtonDown" ></Image>
+    </Grid>
+</UserControl>

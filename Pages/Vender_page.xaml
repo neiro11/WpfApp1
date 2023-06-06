@@ -1,0 +1,163 @@
+﻿<Window x:Class="WpfApp1.Pages.Vender_page"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        Title="Окно поставщика" Height="530" Width="1200">
+    <ScrollViewer VerticalScrollBarVisibility="Visible">
+        
+        <Grid Margin="0,0,0,0" Width="800" Height="500">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="0.1"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="0.1*"/>
+            </Grid.RowDefinitions>
+            <Grid Background="White">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.8*"/>
+                    <ColumnDefinition Width="0.6*"/>
+                    <ColumnDefinition Width="1.4*"/>
+                    <ColumnDefinition Width="0.5*"/>
+                    <ColumnDefinition Width="0.5*"/>
+                    <ColumnDefinition Width="0.5*"/>
+                </Grid.ColumnDefinitions>
+                <Button VerticalAlignment="Center" >
+                    <Button.Template>
+                        <ControlTemplate>
+                            <TextBlock Text="TatExpress"  FontFamily="Nirmala UI" FontSize="24" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+                <Label Content="TatExpress"  FontFamily="Nirmala UI" FontSize="24" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center"></Label>
+                <Border CornerRadius="5" Background="#CBEAFB" VerticalAlignment="Center" Height="35" Grid.Column="1">
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Button VerticalAlignment="Center" HorizontalAlignment="Center" Click="Button_Click" >
+                            <Button.Template>
+                                <ControlTemplate>
+                                    <TextBlock Text="Магазин"  HorizontalAlignment="Center" TextAlignment="Center"></TextBlock>
+                                </ControlTemplate>
+                            </Button.Template>
+                        </Button>
+                    </StackPanel>
+                </Border>
+                <StackPanel VerticalAlignment="Center" Grid.Column="2" Orientation="Horizontal" HorizontalAlignment="Center">
+                    <Grid>
+                        <Border Background="#EFEFEF" CornerRadius="10" Margin="10" VerticalAlignment="Center">
+                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" >
+                                <Image Source="../Resources/images/search1.png" Width="20" Margin="10 0 0 0" VerticalAlignment="Center"/>
+                                <TextBox Foreground="Black" Width="200" Height="30" Margin="5 0 10 0" Padding="5" Text="Поиск..." BorderThickness="0" Background="#EFEFEF" VerticalAlignment="Center">
+                                    <TextBox.Style>
+                                        <Style TargetType="TextBox">
+                                            <Setter Property="Foreground" Value="Gray"/>
+                                            <Style.Triggers>
+                                                <Trigger Property="IsKeyboardFocused" Value="True">
+                                                    <Setter Property="Foreground" Value="Black"/>
+                                                    <Setter Property="Text" Value=""/>
+                                                </Trigger>
+                                                <Trigger Property="Text" Value="Поиск...">
+                                                    <Setter Property="Foreground" Value="LightGray"/>
+                                                </Trigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </TextBox.Style>
+                                </TextBox>
+                            </StackPanel>
+                        </Border>
+                    </Grid>
+
+                </StackPanel>
+
+                <StackPanel Grid.Column="3" Orientation="Horizontal"/>
+                <StackPanel Grid.Column="4" Orientation="Horizontal"/>
+                <StackPanel Grid.Column="3" Orientation="Horizontal" HorizontalAlignment="Center">
+
+
+                    <Image x:Name="img_enter" Height="17"  Source="..\Resources\images\Profile.png" VerticalAlignment="Center"></Image>
+                    <Button x:Name="btn_enter"  VerticalAlignment="Center" Height="16" Width="46" Click="btn_enter_Click">
+                        <Button.Template>
+                            <ControlTemplate>
+                                <TextBlock Text="Выйти"  TextAlignment="Center"></TextBlock>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+
+                </StackPanel>
+
+            </Grid>
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Center" Grid.Row="2">
+                <StackPanel Orientation="Horizontal" >
+                    <StackPanel Orientation="Vertical" Margin="10">
+                        <Label Content="Фамилия" Margin="0,0,0,0" FontSize="16"></Label>
+                    <TextBox x:Name="Surname" Width="180" Height="30" Margin="5"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Vertical" Margin="10">
+                        <Label Content="Имя" FontSize="16"></Label>
+                        <TextBox x:Name="Name" Width="180" Height="30" Margin="5"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Vertical" Margin=" 10">
+                        <Label Content="Отчество" FontSize="16"></Label>
+                        <TextBox x:Name="Patron" Width="180" Height="30" Margin="5"></TextBox>
+                    </StackPanel>
+                    
+
+                    </StackPanel>
+                <StackPanel Orientation="Horizontal" >
+                    <StackPanel Orientation="Vertical" Margin="10">
+                        <Label Content="Номер телефона" FontSize="16" Margin="0,0,0,0"></Label>
+                        <TextBox x:Name="Telephone" Width="180" Height="30" Margin="5" ></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Vertical" Margin="10">
+                        <Label Content="Email" FontSize="16"></Label>
+                        <TextBox x:Name="Email" Width="180" Height="30" Margin="5"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Vertical" Margin=" 10">
+                        <Label Content="Адрес" FontSize="16"></Label>
+                        <TextBox x:Name="Adress" Width="180" Height="30" Margin="5"></TextBox>
+                    </StackPanel>
+
+
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" >
+                    <StackPanel Orientation="Vertical" Margin="10">
+                        <Label Content="Форма регистрации" FontSize="16" Margin="0,0,0,0"></Label>
+                        <TextBox x:Name="Reg_form" Width="180" Height="30" Margin="5"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Vertical" Margin="10">
+                        <Label Content="КПП" FontSize="16"></Label>
+                        <TextBox x:Name="KPP" Width="180" Height="30" Margin="5"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Vertical" Margin=" 10">
+                        <Label Content="БИК" FontSize="16"></Label>
+                        <TextBox x:Name="BIK"  Width="180" Height="30" Margin="5"></TextBox>
+                    </StackPanel>
+
+
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" >
+                    <StackPanel Orientation="Vertical" Margin="10">
+                        <Label Content="Расчетный счет" FontSize="16" Margin="0,0,0,0"></Label>
+                        <TextBox x:Name="ras_chet" Width="180" Height="30" Margin="5"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Vertical" Margin="10">
+                        <Label Content="ОГРНИП" FontSize="16"></Label>
+                        <TextBox x:Name="OGRNIP" Width="180" Height="30" Margin="5"></TextBox>
+                    </StackPanel>
+                    <Button x:Name="Voiti_Copy" FontSize="16"  Content="Сохранить" HorizontalAlignment="Center"  VerticalAlignment="Top" Width="154" Background="Red" Foreground="White" Margin="20,40,0,0" Click="Voiti_Copy_Click">
+                        <Button.Template>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="Red" CornerRadius="5">
+                                    <ContentPresenter Margin="5" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+
+
+                </StackPanel>
+            </StackPanel>
+            <local:UserControl2 Grid.Row="3"></local:UserControl2>
+        </Grid>
+    </ScrollViewer>
+</Window>
